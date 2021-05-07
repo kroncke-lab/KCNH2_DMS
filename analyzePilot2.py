@@ -50,7 +50,7 @@ goodBarcodeCount=0
 while keepGoing:
     count+=1
     if count/1000000.0==round(count/1000000.0):
-        print count
+        print(count)
     a1=fh1.readline().strip()
     if len(a1)==0:
         break
@@ -77,11 +77,11 @@ while keepGoing:
     fh2.write(outputLine+'\n')
 
 percentGood=round(100*goodBarcodeCount/(count-1),1)
-print count-1,'reads processed'
-print barcodePrefixBad, 'reads had a bad barcode prefix'
-print barcodeSuffixBad, 'reads had a bad barcode suffix'
-print goodBarcodeCount,'reads had a good barcode and are included in the output file.'
-print percentGood, '% of reads had a good barcode'
+print(count-1,'reads processed')
+print(barcodePrefixBad, 'reads had a bad barcode prefix')
+print(barcodeSuffixBad, 'reads had a bad barcode suffix')
+print(goodBarcodeCount,'reads had a good barcode and are included in the output file.')
+print(percentGood, '% of reads had a good barcode')
 
 fh1.close()
 fh2.close()
