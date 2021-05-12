@@ -55,8 +55,19 @@ for files in files_rev:
     i += 1
 
 
-# Count unique barcode-variant pairs, discard n=1 observations (maybe also remove n=2, too?), save file?
-df = pd.read_csv(str(i)+"th_fastq.tmp", names=["bc", "wt", "seq"])
-df_min = df.groupby(df.columns.tolist(), as_index=False).size()
-df_filt = df_min[df_min['size'] > 1]
-df_filt_nonwt = df_filt[df_filt['wt'] != 'wt']
+def reduce_fastq(file):
+    global i
+    i = 0
+    df_chunks = pd.read_csv(file, names=["bc", "wt", "seq"], chunksize=500000)
+    frames = [reduce_fastq(chunk) for chunk in df_chunks]
+    df_min = chunk.groupby(chunk.columns.tolist(), as_index=False).size()
+    df_filt = df_min[df_min['size'] > 1]
+    df_filt_nonwt = df_filt[df_filt['wt'] != 'wt']
+
+
+# Count unique barcode-variant pairs, discard n=1 observations (maybe also remove n=2, too?), save file 'to_feather'?
+file = folder + "data/" + str(i) + "th_fastq.tmp"
+reduce_fastq(file)
+
+pd.df_filt_nonwt.to_feather
+
