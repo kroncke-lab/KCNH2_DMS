@@ -1,21 +1,5 @@
 #!/usr/bin/python
 
-
-# Consider using FastqGeneralIterator
-# from Bio.SeqIO.QualityIO import FastqGeneralIterator
-'''
->>> from Bio.SeqIO.QualityIO import FastqGeneralIterator
->>> count = 0
->>> total_len = 0
->>> with open("example.fastq") as in_handle:
-...     for title, seq, qual in FastqGeneralIterator(in_handle):
-...         count += 1
-...         total_len += len(seq)
-'''
-
-# https://biopython.readthedocs.io/en/latest/chapter_cookbook.html#chapter-cookbook
-
-
 # This script inputs a fastq file. It pulls out the barcode from the read,
 # then pulls out the full R1 read, then outputs the result in a table.
 
