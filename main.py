@@ -9,12 +9,14 @@ import Bio
 # Define the folder where the fastq files are and generate a list of all fastq files
 folder = "E:\\Tile1-Library2-LV310\\barcode-key\\20201006-5406-LVkeyRepeat\\"  # input file
 
-files_rev = glob.glob(folder + "*R1*fastq")
-files_barcode = glob.glob(folder + "*R2*fastq")
+files = glob.glob(folder + "*fastq")
+#files_barcode = glob.glob(folder + "*R2*fastq")
 if not os.path.isdir(folder + "data\\"):
     os.mkdir(folder + "data\\")
 
 #  Process raw reads, find 'wt' (or consensus sequence), write out barcode + approximately 10 nucleotides,
+#  TODO: find consensus sequence for both reads (R1 and R2), then look for 18 nucleotide stretches where the first
+#   10k(?) sequences do not match the consensus.
 #  compare each read with 'wt', remove reads with 'N's, write aggregated file to disk
 i = 0
 for files in files_rev:
@@ -58,6 +60,9 @@ result_reads_var_ind = result_reads['wt'] != 'wt'
 result_reads_var = result_reads[result_reads_var_ind]
 result_reads_var = result_reads_var.rename(columns={0:'read_count'})
 
+# TODO: find the differences between single variant and ´wt´, report the variant ID and the location, add the offset
+#  and append that character set (´wt´, resnum, and mutAA) to the ´results´ file
+
 if not adj_start:
     for index, row in result_reads_var.iterrows():
         bc = row['bc']
@@ -70,12 +75,26 @@ if not adj_start:
         fastq_read_r_prot = fastq_read_r.translate()
 
         count = sum(1 for a, b in zip(fastq_read_r_prot, read_wt_seq_rev.translate()) if a != b)
-        break
+        #break
+        mutAA = "NA"
+        resnum = "NA"
+        wtAA = "wt"
         if count > 1:
             variant = "multiple"
         elif count == 1:
             variant = "Good!"
-        print(fastq_read_r_prot+" "+variant)
+            i = 0
+            for read, wt in zip(fastq_read_r_prot._data,read_wt_seq_rev.translate()._data):
+                i += 1
+                if read != wt:
+                    print(read)
+                    mutAA = read
+                    resnum = i + prot_start
+                    wtAA = wt
+                    continue
+        else:
+            variant = "wt"
+        print(fastq_read_r_prot+" "+variant+" "+wtAA+str(resnum)+mutAA)
 
 
     if from_beginning:
