@@ -59,17 +59,23 @@ def findconsensus(file_in):
     return barcode, wt._data, lobc, robc, bcstart, bcend
 
 
-def write_bcvar(file_in, file_barcode, file_var_out, file_wt_out, wildtype, bc_start, bc_end):
+def write_bcvar(file_in, file_barcode, file_var_out, file_wt_out, wildtype, bc_start, bc_end, lobc, robc):
     with open(file_in, 'r') as f, open(file_var_out, 'w') as fout_var, open(file_wt_out, 'w') as fout_wt, open(
             file_barcode, 'r') as barcode_handle:
         fastqline = 0
         for (f_id, seq, q), (r_id, bc_seq, r_q) in zip(FastqGeneralIterator(f), FastqGeneralIterator(barcode_handle)):
             bc = bc_seq[bc_start:bc_end]  # collect a couple nucleotides before and after barcode
+            m = re.split(lobc, bc[0:7])
+            bc = bc[len(m[0]) + len(lobc):len(bc)]
+            try:
+                if m[1]:
+                    n = re.split(robc, bc[17:len(bc)])
+                    bc = bc[0:len(bc) - len(n[0])]
+            except IndexError:
+                continue
             fastqline += 1
             wt_bool = "variant"
             if any(e in seq for e in 'N'):  # remove reads with 'N's
-                continue
-            if any(e in bc_seq for e in 'N'):  # remove reads with 'N's
                 continue
             if seq == wildtype:
                 wt_bool = "wt"

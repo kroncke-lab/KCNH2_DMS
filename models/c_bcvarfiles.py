@@ -6,7 +6,7 @@ from functools import reduce
 
 
 def get_counts(chunk):
-    uniq_bc_pair = chunk[["bc", "wt", "seq"]]
+    uniq_bc_pair = chunk[["bc", "seq"]]
     return uniq_bc_pair.value_counts()
 
 
@@ -15,7 +15,7 @@ def add(previous_result, new_result):
 
 
 def find_and_reduce_bcvars(file):
-    chunks = pd.read_csv(file, names=["bc", "wt", "seq"], chunksize=500000)
+    chunks = pd.read_csv(file, names=["bc", "seq"], chunksize=500000)
     processed_chunks = map(get_counts, chunks)
     #  this next part takes ~ 15 min.
     result = reduce(add, processed_chunks)
