@@ -1,5 +1,6 @@
 from Bio.Seq import Seq
 from Bio import motifs
+import Bio
 import re
 from Bio.Alphabet import IUPAC  # allows for 'N' in the sequence
 from Bio.SeqIO.QualityIO import FastqGeneralIterator
@@ -59,30 +60,43 @@ def findconsensus(file_in):
     return barcode, wt._data, lobc, robc, bcstart, bcend
 
 
-def write_bcvar(file_in, file_barcode, file_var_out, file_wt_out, wildtype, bc_start, bc_end, lobc, robc):
+def write_bcvar(file_in, file_barcode, file_var_out, file_wt_out, wildtype, bc_start, bc_end, lobc, robc, var_start, var_end, reverse):
+
     with open(file_in, 'r') as f, open(file_var_out, 'w') as fout_var, open(file_wt_out, 'w') as fout_wt, open(
             file_barcode, 'r') as barcode_handle:
+
         fastqline = 0
+
         for (f_id, seq, q), (r_id, bc_seq, r_q) in zip(FastqGeneralIterator(f), FastqGeneralIterator(barcode_handle)):
             bc = bc_seq[bc_start:bc_end]  # collect a couple nucleotides before and after barcode
             m = re.split(lobc, bc[0:7])
-            bc = bc[len(m[0]) + len(lobc):len(bc)]
+            bc = bc[len(m[0]) + len(lobc):]
+
+            fastqline += 1
+
+            seq = Bio.Seq.Seq(seq)
+            if reverse:
+                seq = seq.reverse_complement()
+            seq = seq[var_start:var_end]
+
             try:
                 if m[1]:
-                    n = re.split(robc, bc[17:len(bc)])
-                    bc = bc[0:len(bc) - len(n[0])]
+                    n = re.split(robc, bc[18:])
+                    bc = bc[0:-len(n[1])-len(robc)]
             except IndexError:
                 continue
-            fastqline += 1
-            wt_bool = "variant"
+
             if any(e in seq for e in 'N'):  # remove reads with 'N's
                 continue
+
             if seq == wildtype:
-                wt_bool = "wt"
                 fout_wt.write("{barcode},{seq}\n".format(barcode=bc, seq=seq))
                 continue
+
             fout_var.write("{barcode},{seq}\n".format(barcode=bc, seq=seq))
+
             if fastqline / 100000.0 == round(fastqline / 100000.0):
                 print(fastqline)
+
             if fastqline == 5000000:
                 print("Well, we're close!")

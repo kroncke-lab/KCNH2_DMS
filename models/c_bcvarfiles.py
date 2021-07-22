@@ -11,6 +11,7 @@ def get_counts(chunk):
 
 
 def add(previous_result, new_result):
+    print("Added a new chunk! (500,000 records)")
     return previous_result.add(new_result, fill_value=0)
 
 
@@ -19,8 +20,8 @@ def find_and_reduce_bcvars(file):
     processed_chunks = map(get_counts, chunks)
     #  this next part takes ~ 15 min.
     result = reduce(add, processed_chunks)
-    # la siquiente linea deja de los barcode-variadades llaves visto solo uno o dos veces.
-    result = result[result > 5]
+    # la siquiente linea dejan de los barcode-variadades llaves visto solo uno o dos veces.
+    result = result[result > 4]
     return result
 
 
