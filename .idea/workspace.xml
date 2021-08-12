@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/c_bcvarfiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/c_bcvarfiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/consensus.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/consensus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/file_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/file_structure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/labelvariant.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/labelvariant.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="gdmn" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1sDJv1RNkcq0UyvWA3BkBBgX8Rr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KRONCKE\Box Sync\Kroncke_Lab\kcnh2\sequencing\VANTAGE\KCNH2_DMS_project\models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.KCNH2_DMS_project">
+    <configuration name="KCNH2_DMS_project" type="PythonConfigurationType" factoryName="Python">
+      <module name="KCNH2_DMS_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="KCNH2_DMS_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="consensus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="KCNH2_DMS_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\KRONCKE\Box Sync\Kroncke_Lab\kcnh2\sequencing\VANTAGE\KCNH2_DMS_project\models\consensus.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="consensus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="KCNH2_DMS_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\KRONCKE\Box Sync\Kroncke_Lab\kcnh2\sequencing\VANTAGE\KCNH2_DMS_project\models\consensus.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.consensus" />
+        <item itemvalue="Python.consensus" />
+        <item itemvalue="Python.consensus" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="" />
+      <created>1620401453954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620401453954</updated>
+      <workItem from="1620401484283" duration="1278000" />
+      <workItem from="1620403189749" duration="2286000" />
+      <workItem from="1620408060102" duration="8968000" />
+      <workItem from="1620506290692" duration="6692000" />
+      <workItem from="1620654699666" duration="10123000" />
+      <workItem from="1620670626200" duration="8599000" />
+      <workItem from="1620740536830" duration="32486000" />
+      <workItem from="1620849472534" duration="1366000" />
+      <workItem from="1620939960478" duration="4264000" />
+      <workItem from="1621527512457" duration="9672000" />
+      <workItem from="1621865364123" duration="996000" />
+      <workItem from="1621866795633" duration="1056000" />
+      <workItem from="1621868056827" duration="1379000" />
+      <workItem from="1621871514981" duration="797000" />
+      <workItem from="1622059006386" duration="9944000" />
+      <workItem from="1622125018221" duration="18488000" />
+      <workItem from="1622211376180" duration="15381000" />
+      <workItem from="1622576026370" duration="8012000" />
+      <workItem from="1622585885483" duration="434000" />
+      <workItem from="1622586631243" duration="1006000" />
+      <workItem from="1622589033696" duration="35000" />
+      <workItem from="1622645896614" duration="597000" />
+      <workItem from="1622668523155" duration="2016000" />
+      <workItem from="1622735711436" duration="1545000" />
+      <workItem from="1622766483994" duration="10000" />
+      <workItem from="1622817256660" duration="7296000" />
+      <workItem from="1622836771051" duration="1796000" />
+      <workItem from="1623167148425" duration="138000" />
+      <workItem from="1623172252635" duration="1980000" />
+      <workItem from="1623344457851" duration="796000" />
+      <workItem from="1624314197172" duration="2016000" />
+      <workItem from="1625679752533" duration="40000" />
+      <workItem from="1625679882954" duration="7291000" />
+      <workItem from="1626111440244" duration="4250000" />
+      <workItem from="1626117079969" duration="2839000" />
+      <workItem from="1626205214296" duration="18199000" />
+      <workItem from="1626303931867" duration="3218000" />
+      <workItem from="1626360562919" duration="18043000" />
+      <workItem from="1626461775458" duration="20753000" />
+      <workItem from="1626790423889" duration="3492000" />
+      <workItem from="1626807605507" duration="40969000" />
+      <workItem from="1626968354530" duration="2069000" />
+      <workItem from="1627330885410" duration="67000" />
+      <workItem from="1628543917659" duration="624000" />
+      <workItem from="1628625904870" duration="1895000" />
+      <workItem from="1628628931721" duration="4182000" />
+      <workItem from="1628691436907" duration="26700000" />
+    </task>
+    <task id="LOCAL-00001" summary="Intermediate step">
+      <created>1620407695607</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620407695607</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Intermediate steps">
+      <created>1620829037299</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620829037299</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Intermediate steps">
+      <created>1620829134510</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620829134510</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Intermediate steps">
+      <created>1620849488954</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620849488954</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Intermediate steps">
+      <created>1620858733835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620858733835</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Intermediate steps">
+      <created>1621527656579</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621527656579</updated>
+    </task>
+    <task id="LOCAL-00007" summary="sundry intermediate steps">
+      <created>1622582876276</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622582876276</updated>
+    </task>
+    <task id="LOCAL-00008" summary="sundry intermediate steps">
+      <created>1622583368779</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622583368779</updated>
+    </task>
+    <task id="LOCAL-00009" summary="sundry intermediate steps">
+      <created>1622583489614</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622583489614</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1622587329887</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622587329887</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1622668888783</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622668888783</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1622674534909</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622674534909</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1626292266992</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1626292266992</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1626370425030</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1626370425030</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1626967632382</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1626967632383</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Intermediate step" />
+    <MESSAGE value="Intermediate steps" />
+    <MESSAGE value="sundry intermediate steps" />
+    <MESSAGE value="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../Enrich2/enrich2/variant.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus__1_.coverage" NAME="consensus (1) Coverage Results" MODIFIED="1620755425330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1628700565530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/analyzePilot2_py$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1622063587287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus.coverage" NAME="consensus Coverage Results" MODIFIED="1620858367856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
