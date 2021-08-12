@@ -68,6 +68,37 @@ def file_clean(folder, file_stem, suffix):
     return var_file_list
 
 
+def sorted_file_clean(file_stem, suffix):
+
+    for f in file_stem:
+        print(f)
+        bc_init_R1, r_seq_R1, lobc_R1, robc_R1, bcstart_R1, bcend_R1 = models.consensus.findconsensus(
+            f + "_R1" + suffix)
+        bc_init_R2, r_seq_R2, lobc_R2, robc_R2, bcstart_R2, bcend_R2 = models.consensus.findconsensus(
+            f + "_R2" + suffix)
+
+        if bc_init_R1:
+            file_barcode = f + "_R1" + suffix
+            lobc = lobc_R1
+            robc = robc_R1
+            bcstart = bcstart_R1
+            bcend = bcend_R1
+        elif bc_init_R2:
+            file_barcode = f + "_R2" + suffix
+            lobc = lobc_R2
+            robc = robc_R2
+            bcstart = bcstart_R2
+            bcend = bcend_R2
+        else:
+            print("didn't find barcode")
+            continue
+
+        file_bc_out = f + ".sorted_bc"
+
+        models.consensus.write_bc_sorted_cells(file_barcode, file_bc_out, bcstart, bcend, lobc, robc)
+
+
+
 def clip_read(folder, read_wt):
     test = Bio.SeqIO.parse(folder + "plasmid.fasta", 'fasta')
     next(test)
