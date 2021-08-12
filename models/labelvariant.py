@@ -3,6 +3,7 @@ import numpy as np
 import models.c_bcvarfiles
 import Bio
 
+
 # here I should compare the plasmid seq. with the read 'wt' if DNA in 'wt' doesn't match the gene
 def check_outside_cDNA(wt_gene, plasmid, test_seq):
     adj_start = False
@@ -46,6 +47,7 @@ def find_frame(read_seq, wt_prot):
 
 
 def convert_to_mutation(file_list, folder):
+    out_list = []
     for var_file in file_list:
         test = Bio.SeqIO.parse(folder + "plasmid.fasta", 'fasta')
         next(test)
@@ -91,22 +93,33 @@ def convert_to_mutation(file_list, folder):
                         resnum = i + prot_start
                         wtAA = wt
                         continue
-                variant = wtAA+str(resnum)+mutAA
+                variant = wtAA + str(resnum) + mutAA
             elif count == 0:
                 i = 0
                 for read, wt in zip(fastq_read._data, read_wt_adj._data):
                     i += 1
                     if read != wt:
-                        i = math.floor(i/3)
-                        mutAA = read_wt_adj[i*3:i*3+3].translate()._data
+                        i = math.floor(i / 3)
+                        mutAA = read_wt_adj[i * 3:i * 3 + 3].translate()._data
                         resnum = i + 1 + prot_start
                         wtAA = mutAA
                         continue
-                variant = wtAA+str(resnum)+mutAA
+                variant = wtAA + str(resnum) + mutAA
             count_step += 1
             result_reads.at[index, 'variant'] = variant
             result_reads.at[index, 'mutAA'] = mutAA
             result_reads.at[index, 'resnum'] = str(resnum)
             result_reads.at[index, 'wtAA'] = wtAA
 
-        result_reads.to_csv(var_file+'processed.csv')
+        result_reads.to_csv(var_file + 'processed.csv')
+        out_list.append(var_file + 'processed.csv')
+
+    return out_list
+
+
+def count_sorted(file_list):
+    for sort_file in file_list:
+        result = models.c_bcvarfiles.find_and_reduce_bc_sort(sort_file)
+        result_reads = result.reset_index()
+        result_reads = result_reads.rename(columns={0: 'count'})
+        result_reads.to_csv(sort_file + '.processed.csv')
