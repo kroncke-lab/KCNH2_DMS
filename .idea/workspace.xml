@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/c_bcvarfiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/c_bcvarfiles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/consensus.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/consensus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/file_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/file_structure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/labelvariant.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/labelvariant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -72,6 +70,9 @@
       <module name="KCNH2_DMS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -215,7 +216,9 @@
       <workItem from="1628543917659" duration="624000" />
       <workItem from="1628625904870" duration="1895000" />
       <workItem from="1628628931721" duration="4182000" />
-      <workItem from="1628691436907" duration="26700000" />
+      <workItem from="1628691436907" duration="28138000" />
+      <workItem from="1628875724604" duration="4161000" />
+      <workItem from="1629123296309" duration="2684000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -322,7 +325,28 @@
       <option name="project" value="LOCAL" />
       <updated>1626967632383</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1628792637925</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1628792637925</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1628792671513</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1628792671513</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+      <created>1628792693496</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1628792693496</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +370,8 @@
     <MESSAGE value="Intermediate steps" />
     <MESSAGE value="sundry intermediate steps" />
     <MESSAGE value="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
+    <MESSAGE value="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
