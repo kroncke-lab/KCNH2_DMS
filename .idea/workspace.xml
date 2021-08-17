@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="minor adjustments to main and requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/file_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/file_structure.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +58,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -218,7 +218,8 @@
       <workItem from="1628628931721" duration="4182000" />
       <workItem from="1628691436907" duration="28138000" />
       <workItem from="1628875724604" duration="4161000" />
-      <workItem from="1629123296309" duration="2684000" />
+      <workItem from="1629123296309" duration="4376000" />
+      <workItem from="1629228452505" duration="1802000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -346,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628792693496</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="minor adjustments to main and requirements.txt">
+      <created>1629145100461</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1629145100461</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +379,8 @@
     <MESSAGE value="sundry intermediate steps" />
     <MESSAGE value="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
     <MESSAGE value="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
+    <MESSAGE value="minor adjustments to main and requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor adjustments to main and requirements.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
