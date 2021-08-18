@@ -52,6 +52,8 @@ def file_clean(folder, file_stem, suffix):
         var_file_list.append(var_file)
         wt_file = f + "th_fastq.tmp.wt"
         wt_seq_file = var_file + ".read.wt"
+        with open(wt_seq_file, 'w') as out_handle:
+            out_handle.write(str(wt))
 
         wt = Bio.Seq.Seq(wt)
         var_start, var_end, reverse = models.file_structure.clip_read(folder, wt)
@@ -60,10 +62,8 @@ def file_clean(folder, file_stem, suffix):
             wt = wt.reverse_complement()
         wt = wt[var_start:var_end]
 
-        with open(wt_seq_file, 'w') as out_handle:
-            out_handle.write(str(wt))
-
-        models.consensus.write_bcvar(file_var, file_barcode, var_file, wt_file, wt, bcstart, bcend, lobc, robc, var_start, var_end, reverse)
+        models.consensus.write_bcvar(file_var, file_barcode, var_file, wt_file, wt, bcstart, bcend, lobc, robc,
+                                     var_start, var_end, reverse)
 
     return var_file_list
 
@@ -101,6 +101,7 @@ def sorted_file_clean(file_stem, suffix):
         models.consensus.write_bc_sorted_cells(file_barcode, file_bc_out, bcstart, bcend, lobc, robc)
 
     return bc_file_list
+
 
 def clip_read(folder, read_wt):
     test = Bio.SeqIO.parse(folder + "plasmid.fasta", 'fasta')

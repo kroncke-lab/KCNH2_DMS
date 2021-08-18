@@ -7,7 +7,6 @@
     <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="minor adjustments to main and requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/file_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/file_structure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +218,8 @@
       <workItem from="1628691436907" duration="28138000" />
       <workItem from="1628875724604" duration="4161000" />
       <workItem from="1629123296309" duration="4376000" />
-      <workItem from="1629228452505" duration="1802000" />
+      <workItem from="1629228452505" duration="3506000" />
+      <workItem from="1629323167095" duration="642000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -354,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629145100461</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="minor adjustments to main and requirements.txt">
+      <created>1629233374762</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1629233374762</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
