@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="minor adjustments to main and requirements.txt">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="changes for troubleshooting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/file_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/file_structure.py" afterDir="false" />
     </list>
@@ -219,7 +219,7 @@
       <workItem from="1628875724604" duration="4161000" />
       <workItem from="1629123296309" duration="4376000" />
       <workItem from="1629228452505" duration="3506000" />
-      <workItem from="1629323167095" duration="642000" />
+      <workItem from="1629323167095" duration="5361000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -361,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629233374762</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="changes for troubleshooting">
+      <created>1629324008466</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1629324008466</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +394,8 @@
     <MESSAGE value="Merge branch 'master' into gdmn&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
     <MESSAGE value="Added sorted cell processing scripts&#10;&#10;# Conflicts:&#10;#&#9;main.py" />
     <MESSAGE value="minor adjustments to main and requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor adjustments to main and requirements.txt" />
+    <MESSAGE value="changes for troubleshooting" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes for troubleshooting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

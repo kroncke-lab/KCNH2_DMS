@@ -28,7 +28,7 @@ def file_clean(folder, file_stem, suffix):
         bc_init_R2, r_seq_R2, lobc_R2, robc_R2, bcstart_R2, bcend_R2 = models.consensus.findconsensus(
             f + "_R2" + suffix)
 
-        if bc_init_R1:
+        if bc_init_R1 and not bc_init_R2:
             wt = r_seq_R2
             file_barcode = f + "_R1" + suffix
             file_var = f + "_R2" + suffix
@@ -36,7 +36,7 @@ def file_clean(folder, file_stem, suffix):
             robc = robc_R1
             bcstart = bcstart_R1
             bcend = bcend_R1
-        elif bc_init_R2:
+        elif bc_init_R2 and not bc_init_R1:
             wt = r_seq_R1
             file_barcode = f + "_R2" + suffix
             file_var = f + "_R1" + suffix
