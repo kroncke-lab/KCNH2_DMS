@@ -45,15 +45,13 @@ def file_clean(folder, file_stem, suffix):
             bcstart = bcstart_R2
             bcend = bcend_R2
         else:
-            print("didn't find barcode")
+            print("Problem finding barcode")
             continue
 
         var_file = f + "var"
         var_file_list.append(var_file)
         wt_file = f + "th_fastq.tmp.wt"
         wt_seq_file = var_file + ".read.wt"
-        with open(wt_seq_file, 'w') as out_handle:
-            out_handle.write(str(wt))
 
         wt = Bio.Seq.Seq(wt)
         var_start, var_end, reverse = models.file_structure.clip_read(folder, wt)
@@ -61,6 +59,9 @@ def file_clean(folder, file_stem, suffix):
         if reverse:
             wt = wt.reverse_complement()
         wt = wt[var_start:var_end]
+
+        with open(wt_seq_file, 'w') as out_handle:
+            out_handle.write(str(wt))
 
         models.consensus.write_bcvar(file_var, file_barcode, var_file, wt_file, wt, bcstart, bcend, lobc, robc,
                                      var_start, var_end, reverse)
