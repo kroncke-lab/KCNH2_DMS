@@ -51,8 +51,10 @@ def findconsensus(file_in):
         row = [ind, match, diff]
         appended_data.append(row)
         cumulative = cumulative + match
+    m = max(appended_data, key=lambda x: x[1])
+    m_max = m[1]
 
-    if cumulative > 720000:
+    if cumulative > 720000 and m_max > 35000:
         bc = pbc
         barcode = True
         df = pd.DataFrame(appended_data, columns=["index", "matches", "diff"])
