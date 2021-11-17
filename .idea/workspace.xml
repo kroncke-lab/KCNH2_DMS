@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="modified consensus.py to not mistake crappy reads as the barcode.">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="added example R scripts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Variant_Browser" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -60,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KRONCKE\Box Sync\Kroncke_Lab\kcnh2\sequencing\VANTAGE\KCNH2_DMS_project" />
       <recent name="C:\Users\KRONCKE\Box Sync\Kroncke_Lab\kcnh2\sequencing\VANTAGE\KCNH2_DMS_project\models" />
     </key>
   </component>
@@ -223,6 +224,8 @@
       <workItem from="1629816371527" duration="35000" />
       <workItem from="1631823932363" duration="270000" />
       <workItem from="1631824349499" duration="151000" />
+      <workItem from="1636046167183" duration="1043000" />
+      <workItem from="1636052370585" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -392,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631824133633</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added example R scripts">
+      <created>1636046409349</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1636046409349</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +432,8 @@
     <MESSAGE value="added break/continue for matching the bc twice." />
     <MESSAGE value="modified Reverse function" />
     <MESSAGE value="modified consensus.py to not mistake crappy reads as the barcode." />
-    <option name="LAST_COMMIT_MESSAGE" value="modified consensus.py to not mistake crappy reads as the barcode." />
+    <MESSAGE value="added example R scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="added example R scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

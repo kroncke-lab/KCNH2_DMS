@@ -35,8 +35,9 @@ def findconsensus(file_in):
         count = 0
         for title, seq, qual in FastqGeneralIterator(in_handle):
             tmp.append(Seq(seq, IUPAC.ambiguous_dna))
-            data.append(seq)
-            count += 1
+            if not re.search('GGGGGGGGGGGGGGGGG', seq):
+                data.append(seq)
+                count += 1
             if count == 40000:
                 wt = motifs.create(tmp, IUPAC.ambiguous_dna).consensus
                 break
