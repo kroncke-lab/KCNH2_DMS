@@ -34,8 +34,8 @@ def findconsensus(file_in):
     with open(file_in) as in_handle:
         count = 0
         for title, seq, qual in FastqGeneralIterator(in_handle):
-            tmp.append(Seq(seq, IUPAC.ambiguous_dna))
             if not re.search('GGGGGGGGGGGGGGGGG', seq):
+                tmp.append(Seq(seq, IUPAC.ambiguous_dna))
                 data.append(seq)
                 count += 1
             if count == 40000:
