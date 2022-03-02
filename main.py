@@ -1,6 +1,6 @@
 import models.file_structure
 import models.labelvariant
-
+'''
 # Define the folder where the fastq files are and generate a list of all fastq files
 folder = "/mnt/temp3/Tile3-Library1-RU327/barcode-key/20201125-5471-RU-Tile3/"  # input file
 
@@ -11,12 +11,12 @@ suffix, file_stem = models.file_structure.file_grab(folder)
 var_file_list = models.file_structure.file_clean(folder, list(file_stem), suffix)
 
 out_list = models.labelvariant.convert_to_mutation(list(var_file_list), folder)
-
+'''
 
 
 ################### FIND BARCODE COUNTS FROM SORTED CELLS ###################
 #  Define the folder where the fastq files are and generate a list of all fastq files
-folder = "/mnt/temp3/Tile3-Library1-RU327/20210416-6147-RU/"  # input file
+folder = "\\Users\\KRONCKE\\Desktop\\KCNH2-sequencing-tests\\"  # input file
 
 suffix, file_stem = models.file_structure.file_grab(folder)
 

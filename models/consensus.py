@@ -44,7 +44,7 @@ def findconsensus(file_in):
 
     pbc = wt._data
 
-    for ind in range(1, 60, 1):
+    for ind in range(1, 130, 1): #range(1, 60, 1)
         match = check_align(pbc, data, ind, 18)
         if prev_match > 0:
             diff = match - prev_match
@@ -55,7 +55,7 @@ def findconsensus(file_in):
     m = max(appended_data, key=lambda x: x[1])
     m_max = m[1]
 
-    if cumulative > 720000 and m_max > 35000:
+    if cumulative > 400000 and m_max > 35000:
         bc = pbc
         barcode = True
         df = pd.DataFrame(appended_data, columns=["index", "matches", "diff"])

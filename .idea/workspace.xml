@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="added example R scripts">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="QC to remove aberrant reads from reads used to detect barcode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/consensus.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/consensus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +228,9 @@
       <workItem from="1631824349499" duration="151000" />
       <workItem from="1636046167183" duration="1043000" />
       <workItem from="1636052370585" duration="27000" />
+      <workItem from="1637178733477" duration="149000" />
+      <workItem from="1640798608773" duration="89000" />
+      <workItem from="1646256944149" duration="3261000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -402,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636046409349</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="QC to remove aberrant reads from reads used to detect barcode">
+      <created>1637178849697</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1637178849697</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +445,8 @@
     <MESSAGE value="modified Reverse function" />
     <MESSAGE value="modified consensus.py to not mistake crappy reads as the barcode." />
     <MESSAGE value="added example R scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="added example R scripts" />
+    <MESSAGE value="QC to remove aberrant reads from reads used to detect barcode" />
+    <option name="LAST_COMMIT_MESSAGE" value="QC to remove aberrant reads from reads used to detect barcode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -447,7 +460,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus__1_.coverage" NAME="consensus (1) Coverage Results" MODIFIED="1620755425330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1628700565530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1646260452346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/analyzePilot2_py$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1622063587287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus.coverage" NAME="consensus Coverage Results" MODIFIED="1620858367856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
