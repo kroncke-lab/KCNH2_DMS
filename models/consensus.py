@@ -34,7 +34,7 @@ def findconsensus(file_in):
     with open(file_in) as in_handle:
         count = 0
         for title, seq, qual in FastqGeneralIterator(in_handle):
-            if not re.search('GGGGGGGGGGGGGGGGG', seq):
+            if not re.search('GGGGGGGGGGGGGG', seq):
                 tmp.append(Seq(seq, IUPAC.ambiguous_dna))
                 data.append(seq)
                 count += 1
@@ -44,7 +44,7 @@ def findconsensus(file_in):
 
     pbc = wt._data
 
-    for ind in range(1, 130, 1): #range(1, 60, 1)
+    for ind in range(1, 130, 1):
         match = check_align(pbc, data, ind, 18)
         if prev_match > 0:
             diff = match - prev_match
@@ -55,14 +55,14 @@ def findconsensus(file_in):
     m = max(appended_data, key=lambda x: x[1])
     m_max = m[1]
 
-    if cumulative > 400000 and m_max > 35000:
+    if cumulative > 400000 and m_max > 38000:
         bc = pbc
         barcode = True
         df = pd.DataFrame(appended_data, columns=["index", "matches", "diff"])
 
         upper = df[['diff']].idxmin()
         bcstart = upper.values[0]-18-9
-        bcend = upper.values[0]+10
+        bcend = upper.values[0]+12
 
         appended_data = []
         for ind in range(bcstart, bcend, 1):
@@ -93,8 +93,16 @@ def write_bcvar(file_in, file_barcode, file_var_out, file_wt_out, wildtype, bc_s
         for (f_id, seq, q), (r_id, bc_seq, r_q) in zip(FastqGeneralIterator(f), FastqGeneralIterator(barcode_handle)):
             fastqline += 1
             bc = bc_seq[bc_start:bc_end]  # collect a couple nucleotides before and after barcode
-            m = re.split(lobc, bc[0:11])
-            bc = bc[len(m[0]) + len(lobc):len(m[0]) + len(lobc) + 18]
+
+            first_match = re.split(lobc, bc)
+            if len(first_match) < 2:
+                continue
+            bc = re.split(robc, first_match[1])
+            if len(bc) < 2:
+                continue
+            bc = bc[0]
+            if len(bc) != 18:
+                continue
 
             seq = Bio.Seq.Seq(seq)
             bc = Bio.Seq.Seq(bc)
@@ -111,13 +119,22 @@ def write_bcvar(file_in, file_barcode, file_var_out, file_wt_out, wildtype, bc_s
                 fout_wt.write("{barcode},{seq}\n".format(barcode=bc, seq=seq))
                 continue
 
+            if re.search('GGGGGGGGGGG', seq._data) is not None:
+                continue
+
+            if re.search('AAAAAAAAAAAAA', seq._data) is not None:
+                continue
+
+            if re.search('TTTTTTTTTTTTT', seq._data) is not None:
+                continue
+
+            if re.search('CCCCCCCCCCC', seq._data) is not None:
+                continue
+
             fout_var.write("{barcode},{seq}\n".format(barcode=bc, seq=seq))
 
             if fastqline / 100000.0 == round(fastqline / 100000.0):
                 print(fastqline)
-
-            if fastqline == 5000000:
-                print("Well, we're close!")
 
 
 def write_bc_sorted_cells(file_barcode, file_bc_out, bc_start, bc_end, lobc, robc):
