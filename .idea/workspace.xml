@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Added quality control steps to ensure barcodes are successful reads">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Narrowed barcode region such that repeated GG and CC were not offsetting restriction site matches and making the found 'barcode' too long">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/consensus.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/consensus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/file_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/file_structure.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +231,8 @@
       <workItem from="1646856801752" duration="7760000" />
       <workItem from="1646924840715" duration="6155000" />
       <workItem from="1650566801531" duration="21000" />
-      <workItem from="1651085937000" duration="2995000" />
+      <workItem from="1651085937000" duration="3855000" />
+      <workItem from="1651159867434" duration="3055000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -421,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646260810325</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Narrowed barcode region such that repeated GG and CC were not offsetting restriction site matches and making the found 'barcode' too long">
+      <created>1651090050951</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1651090050951</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +463,8 @@
     <MESSAGE value="added example R scripts" />
     <MESSAGE value="QC to remove aberrant reads from reads used to detect barcode" />
     <MESSAGE value="expanded section to search for barcodes (for new primers we now use)" />
-    <option name="LAST_COMMIT_MESSAGE" value="expanded section to search for barcodes (for new primers we now use)" />
+    <MESSAGE value="Narrowed barcode region such that repeated GG and CC were not offsetting restriction site matches and making the found 'barcode' too long" />
+    <option name="LAST_COMMIT_MESSAGE" value="Narrowed barcode region such that repeated GG and CC were not offsetting restriction site matches and making the found 'barcode' too long" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -468,7 +478,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus__1_.coverage" NAME="consensus (1) Coverage Results" MODIFIED="1620755425330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1650409498599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1651161906632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/analyzePilot2_py$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1622063587287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus.coverage" NAME="consensus Coverage Results" MODIFIED="1620858367856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

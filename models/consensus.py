@@ -96,18 +96,12 @@ def write_bcvar(file_in, file_barcode, file_var_out, file_wt_out, wildtype, bc_s
 
             first_match = re.split(lobc, bc)
             if len(first_match) < 2:
-                #print('did not match left of barcode')
                 continue
             bc = re.split(robc, first_match[1])
             if len(bc) < 2:
-                #print('did not match RIGHT of barcode')
                 continue
             bc = bc[0]
             if len(bc) != 18:
-                #print(lobc+" "+robc)
-                #print(bc_seq[bc_start:bc_end])
-                #print(bc)
-                #print('barcode not 18 nucleotides')
                 continue
 
             seq = Bio.Seq.Seq(seq)
