@@ -37,8 +37,9 @@ def check_outside_cDNA(wt_gene, plasmid, test_seq):
 
 def find_frame(read_seq, wt_prot):
     n = np.arange(3)
+    frame_end = math.floor(len(read_seq) / 3) * 3
     for j in np.nditer(n):
-        read_prot = read_seq[j:].translate()
+        read_prot = read_seq[j:frame_end-3+j].translate()
         if wt_prot.seq.find(read_prot) >= 0:
             return wt_prot.seq.find(read_prot), j.max()
         else:
@@ -58,6 +59,7 @@ def convert_to_mutation(file_list, folder):
         read_wt = open(var_file + ".read.wt", 'r').readline()
         read_wt = read_wt.upper()
         read_wt = Bio.Seq.Seq(read_wt)
+        frame_end = math.floor(len(read_wt)/3)*3
 
         (prot_start, frame_offset) = models.labelvariant.find_frame(read_wt, wt_prot)
         result = models.c_bcvarfiles.find_and_reduce_bcvars(var_file)
@@ -66,8 +68,8 @@ def convert_to_mutation(file_list, folder):
 
         count_step = 0
         for index, row in result_reads.iterrows():
-            var = row['seq'][frame_offset:]
-            read_wt_adj = read_wt[frame_offset:]
+            var = row['seq'][frame_offset:frame_end]
+            read_wt_adj = read_wt[frame_offset:frame_end]
             fastq_read = Bio.Seq.Seq(var)
 
             count = sum(1 for a, b in zip(fastq_read.translate(), read_wt_adj.translate()) if a != b)
@@ -105,12 +107,14 @@ def convert_to_mutation(file_list, folder):
                         wtAA = mutAA
                         continue
                 variant = wtAA + str(resnum) + mutAA
+
             count_step += 1
             result_reads.at[index, 'variant'] = variant
             result_reads.at[index, 'mutAA'] = mutAA
             result_reads.at[index, 'resnum'] = str(resnum)
             result_reads.at[index, 'wtAA'] = wtAA
 
+        result_reads = result_reads[result_reads['variant'] != 'wtNANA']
         result_reads.to_csv(var_file + 'processed.csv')
         out_list.append(var_file + 'processed.csv')
 
