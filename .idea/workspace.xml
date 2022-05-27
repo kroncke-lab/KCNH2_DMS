@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Added ability to detect and interpret barcodes present in both R1 and R2 fastq reads.">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Recoded translations to only use multiples of 3, removing the annoying warnings which resulted. And removed variants identified at the last 1-3 nucleotide positions which cannot accurately determine an amino acid change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/labelvariant.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/labelvariant.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,9 @@
       <module name="KCNH2_DMS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -233,7 +235,8 @@
       <workItem from="1651085937000" duration="3855000" />
       <workItem from="1651159867434" duration="3885000" />
       <workItem from="1651181623991" duration="14000" />
-      <workItem from="1652717612109" duration="8377000" />
+      <workItem from="1652717612109" duration="9420000" />
+      <workItem from="1652884190121" duration="603000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -438,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651163555962</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Recoded translations to only use multiples of 3, removing the annoying warnings which resulted. And removed variants identified at the last 1-3 nucleotide positions which cannot accurately determine an amino acid change">
+      <created>1652730272575</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1652730272575</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +483,8 @@
     <MESSAGE value="expanded section to search for barcodes (for new primers we now use)" />
     <MESSAGE value="Narrowed barcode region such that repeated GG and CC were not offsetting restriction site matches and making the found 'barcode' too long" />
     <MESSAGE value="Added ability to detect and interpret barcodes present in both R1 and R2 fastq reads." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ability to detect and interpret barcodes present in both R1 and R2 fastq reads." />
+    <MESSAGE value="Recoded translations to only use multiples of 3, removing the annoying warnings which resulted. And removed variants identified at the last 1-3 nucleotide positions which cannot accurately determine an amino acid change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recoded translations to only use multiples of 3, removing the annoying warnings which resulted. And removed variants identified at the last 1-3 nucleotide positions which cannot accurately determine an amino acid change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

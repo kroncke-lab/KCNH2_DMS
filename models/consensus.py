@@ -146,8 +146,16 @@ def write_bc_sorted_cells(file_barcode, file_bc_out, bc_start, bc_end, lobc, rob
         for (r_id, bc_seq, r_q) in FastqGeneralIterator(barcode_handle):
             fastqline += 1
             bc = bc_seq[bc_start:bc_end]  # collect a couple nucleotides before and after barcode
-            m = re.split(lobc, bc[0:11])
-            bc = bc[len(m[0]) + len(lobc):len(m[0]) + len(lobc) + 18]
+
+            first_match = re.split(lobc, bc)
+            if len(first_match) < 2:
+                continue
+            bc = re.split(robc, first_match[1])
+            if len(bc) < 2:
+                continue
+            bc = bc[0]
+            if len(bc) != 18:
+                continue
 
             if any(e in bc for e in 'N'):  # remove reads with 'N's
                 continue
