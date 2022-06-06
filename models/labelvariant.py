@@ -59,17 +59,17 @@ def convert_to_mutation(file_list, folder):
         read_wt = open(var_file + ".read.wt", 'r').readline()
         read_wt = read_wt.upper()
         read_wt = Bio.Seq.Seq(read_wt)
-        frame_end = math.floor(len(read_wt)/3)*3
 
         (prot_start, frame_offset) = models.labelvariant.find_frame(read_wt, wt_prot)
+        frame_end = math.floor((len(read_wt)-frame_offset)/3)*3
         result = models.c_bcvarfiles.find_and_reduce_bcvars(var_file)
         result_reads = result.reset_index()
         result_reads = result_reads.rename(columns={0: 'count'})
 
         count_step = 0
         for index, row in result_reads.iterrows():
-            var = row['seq'][frame_offset:frame_end]
-            read_wt_adj = read_wt[frame_offset:frame_end]
+            var = row['seq'][frame_offset:frame_end+frame_offset]
+            read_wt_adj = read_wt[frame_offset:frame_end+frame_offset]
             fastq_read = Bio.Seq.Seq(var)
 
             count = sum(1 for a, b in zip(fastq_read.translate(), read_wt_adj.translate()) if a != b)

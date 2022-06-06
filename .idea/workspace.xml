@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Increased QC of identified sorted-cells barcodes to match QC for barcode-key identification">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Removed the blank variant reads due to sequencing into the barcode">
       <change beforePath="$PROJECT_DIR$/models/labelvariant.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/labelvariant.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +239,7 @@
       <workItem from="1652884190121" duration="603000" />
       <workItem from="1653664405355" duration="1654000" />
       <workItem from="1654524303350" duration="1674000" />
-      <workItem from="1654544282846" duration="3920000" />
+      <workItem from="1654544282846" duration="5169000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -459,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653665460882</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Removed the blank variant reads due to sequencing into the barcode">
+      <created>1654548347588</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1654548347588</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +502,8 @@
     <MESSAGE value="Added ability to detect and interpret barcodes present in both R1 and R2 fastq reads." />
     <MESSAGE value="Recoded translations to only use multiples of 3, removing the annoying warnings which resulted. And removed variants identified at the last 1-3 nucleotide positions which cannot accurately determine an amino acid change" />
     <MESSAGE value="Increased QC of identified sorted-cells barcodes to match QC for barcode-key identification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Increased QC of identified sorted-cells barcodes to match QC for barcode-key identification" />
+    <MESSAGE value="Removed the blank variant reads due to sequencing into the barcode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed the blank variant reads due to sequencing into the barcode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,15 +514,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/labelvariant.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/models/labelvariant.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/models/labelvariant.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/models/labelvariant.py</url>
           <line>75</line>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus__1_.coverage" NAME="consensus (1) Coverage Results" MODIFIED="1620755425330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1654548029006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1654549496892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/analyzePilot2_py$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1622063587287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus.coverage" NAME="consensus Coverage Results" MODIFIED="1620858367856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
