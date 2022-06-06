@@ -114,6 +114,7 @@ def convert_to_mutation(file_list, folder):
             result_reads.at[index, 'resnum'] = str(resnum)
             result_reads.at[index, 'wtAA'] = wtAA
 
+        result_reads = result_reads[result_reads['wtAA'] != '']
         result_reads = result_reads[result_reads['variant'] != 'wtNANA']
         result_reads.to_csv(var_file + 'processed.csv')
         out_list.append(var_file + 'processed.csv')
