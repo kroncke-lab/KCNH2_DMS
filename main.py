@@ -2,7 +2,7 @@ import models.file_structure
 import models.labelvariant
 
 # Define the folder where the fastq files are and generate a list of all fastq files
-folder = "\\Users\\KRONCKE\\Desktop\\KCNH2-sequencing-tests\\"  # input file
+folder = "\\Users\\KRONCKE\\OneDrive\\Desktop\\KCNH2-sequencing-tests\\"  # input file
 
 suffix, file_stem = models.file_structure.file_grab(folder)
 

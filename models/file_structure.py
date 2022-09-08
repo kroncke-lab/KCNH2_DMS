@@ -128,12 +128,12 @@ def clip_read(folder, read_wt):
         if wt_gene.seq.find(read_wt[0:18]) > 0:
             while wt_gene.seq.find(read_wt[0:i]) > 0:
                 i += 1
-            var_start = 0
+            var_start = 1
             var_end = i - 1
         elif wt_gene.seq.find(read_wt[-18:]) > 0:
             while wt_gene.seq.find(read_wt[-i:]) > 0:
                 i += 1
-            var_start = -i + 1
+            var_start = -i + 2
             var_end = None
     else:
         var_start = 0

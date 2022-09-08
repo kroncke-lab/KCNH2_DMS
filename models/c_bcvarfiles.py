@@ -25,7 +25,7 @@ def find_and_reduce_bcvars(file):
     processed_chunks = map(get_counts, chunks)
     #  this next part takes ~ 15 min.
     result = reduce(add, processed_chunks)
-    # la siquiente linea dejan de los barcode-variantes llaves visto solo uno o dos veces.
+    # la siquiente linea dejan de los barcode-variantes llaves visto solo unos veces.
     result = result[result > 4]
     return result
 
