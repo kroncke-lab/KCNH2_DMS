@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Adjusted frame detection to avoid annoying Biopython translation warnings">
+    <list default="true" id="15582f89-6099-4910-8971-4b5cbd67e017" name="Default Changelist" comment="Adjusted barcode detection to ensure both sides of barcode are detected.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/c_bcvarfiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/c_bcvarfiles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/consensus.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/consensus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/file_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/file_structure.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +69,9 @@
       <module name="KCNH2_DMS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -245,7 +244,9 @@
       <workItem from="1654884988317" duration="1027000" />
       <workItem from="1656429546133" duration="32000" />
       <workItem from="1662483625896" duration="3548000" />
-      <workItem from="1662489231119" duration="16074000" />
+      <workItem from="1662489231119" duration="16904000" />
+      <workItem from="1663165700338" duration="2619000" />
+      <workItem from="1663473927948" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="Intermediate step">
       <created>1620407695607</created>
@@ -478,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654549779446</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Adjusted barcode detection to ensure both sides of barcode are detected.">
+      <created>1662651959696</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1662651959696</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +525,8 @@
     <MESSAGE value="Increased QC of identified sorted-cells barcodes to match QC for barcode-key identification" />
     <MESSAGE value="Removed the blank variant reads due to sequencing into the barcode" />
     <MESSAGE value="Adjusted frame detection to avoid annoying Biopython translation warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted frame detection to avoid annoying Biopython translation warnings" />
+    <MESSAGE value="Adjusted barcode detection to ensure both sides of barcode are detected." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted barcode detection to ensure both sides of barcode are detected." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -531,12 +540,17 @@
           <line>69</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus__1_.coverage" NAME="consensus (1) Coverage Results" MODIFIED="1620755425330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1662651635176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/KCNH2_DMS_project$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1663165977890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/analyzePilot2_py$KCNH2_DMS_project.coverage" NAME="KCNH2_DMS_project Coverage Results" MODIFIED="1622063587287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/analyzePilot2_py$consensus.coverage" NAME="consensus Coverage Results" MODIFIED="1620858367856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
