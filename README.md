@@ -16,57 +16,72 @@ This version is stringent on filtering reads based on the base pairs flanking th
 Set Up and Install: 
 
 First, install any dependencies. This script requires python3 and a virtual environment with the following packages:
-#if necessary, update or call python3
-module load python3 
 
-virtualenv /path/we/want/
-source /path/we/want/bin/activate
+$ # if necessary, update or call python3
 
-pip install matplotlib==3.4.2
-pip install biopython==1.77
-#############the biopython must be version 1.77 to allow for use of the Alphabet.IUPAC module!!! ########
+$ module load python3 
 
-##pandas and numpy are not critical which version
-pip install pandas
-pip install numpy
+$ virtualenv /path/we/want/
+
+$ source /path/we/want/bin/activate
+
+$ pip install matplotlib==3.4.2
+
+$ pip install biopython==1.77
+
+$ #############the biopython must be version 1.77 to allow for use of the Alphabet.IUPAC module!!! ########
+
+$ ##pandas and numpy are not critical which version
+
+$ pip install pandas
+
+$ pip install numpy
 
 Create a directory that will hold the .fastq reads and the reference sequence. The reference sequence must be formatted as a fasta and include two entries:
 the first entry will be the dna sequence of the entire plasmid. The second entry in this fasta file must be the dna only of the protein coding sequence.
 The only files in this directory should be the fastq files and reference fasta file, which should be named plasmid.fasta 
 The reference fasta file should read like so:
 
->dna_of_full_plasmid
-atcgatcgatcgatcgatcgatcgatcgatcgatcgatcgatcg
->dna_of_protein_coding_region
-atcgatcgatcg
+$ >dna_of_full_plasmid
+
+$ atcgatcgatcgatcgatcgatcgatcgatcgatcgatcgatcg
+
+$ >dna_of_protein_coding_region
+
+$ atcgatcgatcg
 
 modify the first lines of the main.py script to search in the correct directory 
 
-folder = "/Users/directory/with/files/"
+$ folder = "/Users/directory/with/files/"
 
 This script can be run in the custom virtual environment by calling
 
-/path/we/want/bin/python3 main.py
+$ /path/we/want/bin/python3 main.py
 
-NOTE: If you only wish to analyze the barcode pairings with the variants and generate an index of barcode-variant pairs, comment out the second half of main.py after line 15
+NOTE: If you only wish to analyze the barcode pairings with the variants and generate an index of barcode-variant pairs, comment out the second half of main.py after line 15. 
 The default setting is barcode = 18 base pairs. If needed, this can be changed manually by changing 18 to your custom barcode length at consensus.py - line 65, line 81, line 105, and line 158. 
 
 
 
 Further note for users new to python: directory structure is important when working with the python virtual environment. Following directory structure recommended: 
 
-cd /working/directory/
-move the entire KCNH2_DMS folder into this directory
+$ cd /working/directory/
+
+$ move the entire KCNH2_DMS folder into this directory
 
 create the dna files directory
-mkdir ./DNA/
+
+$ mkdir ./DNA/
 
 modify main.py to point to the /working/directory/DNA/
 
-virtualenv /working/directory/KCNH2_DMS
-source ./KCNH2_DMS/bin/activate
-./KCNH2_DMS/bin/python3 -m pip install install packages
-./KCNH2_DMS/bin/python3 ./KCNH2_DMS/main.py
+$ virtualenv /working/directory/KCNH2_DMS
+
+$ source ./KCNH2_DMS/bin/activate
+
+$ ./KCNH2_DMS/bin/python3 -m pip install install packages
+
+$ ./KCNH2_DMS/bin/python3 ./KCNH2_DMS/main.py
 
 This directory structure should allow for correct recognition of all dependencies and subscripts needed in the virtual environment
 
