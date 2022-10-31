@@ -1,7 +1,7 @@
 # Deep Mutational Scan of KCNH2
 
 Here we develop an experimental method to quantitate variant-induced mistrafficking of missense variants in KCNH2. 
-All code and data used and referenced in the manuscript (not yet accepted) are included here.
+All code and data used and referenced in the manuscript (PMID: 35688148 PMCID: PMC9300756 DOI: 10.1016/j.ajhg.2022.05.003) are included here.
 
 Usage and Summary:
 
