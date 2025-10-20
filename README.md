@@ -1,87 +1,109 @@
 # Deep Mutational Scan of KCNH2
 
-Here we develop an experimental method to quantitate variant-induced mistrafficking of missense variants in KCNH2. 
-All code and data used and referenced in the manuscript (PMID: 35688148 PMCID: PMC9300756 DOI: 10.1016/j.ajhg.2022.05.003) are included here.
+## Overview
+This repository contains the analysis code supporting the publication:
 
-Usage and Summary:
+> Vanoye et al., *The American Journal of Human Genetics* (2022). PMID: 35688148 · PMCID: PMC9300756 · DOI: [10.1016/j.ajhg.2022.05.003](https://doi.org/10.1016/j.ajhg.2022.05.003)
 
-This suit of python scripts are useful for deep mutational scanning experiments, specifically, those which use a barcode linked to a mutation in the protein 
-coding sequence. 
-First, the script identifies the barcodes from the consensus of the input reads. It then identifies the mutation from the reads by comparing it to the wild-type
-sequence and then links the barcode to the mutation to create a barcode-mutation index. 
-The script then proceeds to the .fastq files from sort-seq experiments, containing the barcodes from enriched pools of cells. The script quantitates barcode reads in 
-each pool to calculate levels of enrichment. 
-This version is stringent on filtering reads based on the base pairs flanking the barcode region and it is imperative all barcodes have identical flanking regions.
+The scripts implement a deep mutational scanning (DMS) workflow for KCNH2 missense variants. The pipeline:
 
-Set Up and Install: 
+1. Builds barcode consensus sequences from raw reads.
+2. Identifies protein-coding variants by comparing reads to a supplied wild-type reference.
+3. Links each barcode to its associated variant to produce a barcode–variant index.
+4. Quantifies barcode abundance in sort-seq experiments to measure enrichment across cell populations.
 
-First, install any dependencies. This script requires python3 and a virtual environment with the following packages:
+All code and data referenced by the manuscript are included in this repository.
 
-$ # if necessary, update or call python3
+## Repository layout
 
-$ module load python3 
+- `main.py` – entry point that orchestrates barcode identification and enrichment quantification.
+- `Contents/` – supplementary notebooks, figures, and tables associated with the manuscript.
+- `R_src/` – R utilities used for downstream analysis and visualization.
+- `models/` – trained models used for DMS interpretation.
 
-$ virtualenv /path/we/want/
+## Requirements
 
-$ source /path/we/want/bin/activate
+- Python 3.7 or later
+- [`virtualenv`](https://virtualenv.pypa.io/)
+- `matplotlib==3.4.2`
+- `biopython==1.77` *(required for the `Alphabet.IUPAC` module)*
+- `pandas`
+- `numpy`
 
-$ pip install matplotlib==3.4.2
+> **Note:** The Biopython dependency is pinned to 1.77. Later versions remove `Alphabet.IUPAC`, which is required by the current scripts.
 
-$ pip install biopython==1.77
+## Recommended environment setup
 
-$ #############the biopython must be version 1.77 to allow for use of the Alphabet.IUPAC module!!! ########
+```bash
+# create a working directory and clone the repository
+cd /path/to/working/directory
 
-$ ##pandas and numpy are not critical which version
+# (optional) place input FASTQ/FASTA files in a dedicated folder
+mkdir DNA
 
-$ pip install pandas
+# create and activate a virtual environment
+python3 -m venv KCNH2_DMS-env
+source KCNH2_DMS-env/bin/activate
 
-$ pip install numpy
+# install dependencies
+pip install matplotlib==3.4.2 biopython==1.77 pandas numpy
+```
 
-Create a directory that will hold the .fastq reads and the reference sequence. The reference sequence must be formatted as a fasta and include two entries:
-the first entry will be the dna sequence of the entire plasmid. The second entry in this fasta file must be the dna only of the protein coding sequence.
-The only files in this directory should be the fastq files and reference fasta file, which should be named plasmid.fasta 
-The reference fasta file should read like so:
+If you are working on a managed cluster that provides environment modules, the same steps can be adapted to use `module load python3` prior to creating the virtual environment.
 
-$ >dna_of_full_plasmid
+## Input data expectations
 
-$ atcgatcgatcgatcgatcgatcgatcgatcgatcgatcgatcg
+Create a directory (e.g., `/path/to/working/directory/DNA/`) containing only the FASTQ files generated from the sort-seq experiment and a reference FASTA named `plasmid.fasta`. The FASTA must have **two** entries:
 
-$ >dna_of_protein_coding_region
+```text
+>dna_of_full_plasmid
+ATCGATCG...
+>dna_of_protein_coding_region
+ATCGATCG...
+```
 
-$ atcgatcgatcg
+The barcode region must have identical flanking sequences across all reads because the consensus step performs stringent filtering on these positions.
 
-modify the first lines of the main.py script to search in the correct directory 
+## Configuring and running the pipeline
 
-$ folder = "/Users/directory/with/files/"
+Edit the `folder` variable at the top of `main.py` to point to the directory containing your FASTQ and FASTA files:
 
-This script can be run in the custom virtual environment by calling
+```python
+folder = "/path/to/working/directory/DNA/"
+```
 
-$ /path/we/want/bin/python3 main.py
+Then execute the pipeline from the virtual environment:
 
-NOTE: If you only wish to analyze the barcode pairings with the variants and generate an index of barcode-variant pairs, comment out the second half of main.py after line 15. 
-The default setting is barcode = 18 base pairs. If needed, this can be changed manually by changing 18 to your custom barcode length at consensus.py - line 65, line 81, line 105, and line 158. 
+```bash
+python main.py
+```
 
+If you only need to build the barcode–variant index and do not want to run the enrichment quantification, comment out the commands after line 15 in `main.py`.
 
+### Adjusting the barcode length
 
-Further note for users new to python: directory structure is important when working with the python virtual environment. Following directory structure recommended: 
+The default barcode length is 18 base pairs. To work with barcodes of a different size, update the constants in `consensus.py` (lines 65, 81, 105, and 158) to reflect the desired length.
 
-$ cd /working/directory/
+## Tips for new Python users
 
-$ move the entire KCNH2_DMS folder into this directory
+Directory structure matters when working with virtual environments. One robust layout is:
 
-create the dna files directory
+```text
+/working/directory/
+├── DNA/                    # FASTQ and plasmid.fasta files
+├── KCNH2_DMS/              # cloned repository
+└── KCNH2_DMS-env/          # virtual environment
+```
 
-$ mkdir ./DNA/
+Activate the environment from `/working/directory/` and run the scripts via:
 
-modify main.py to point to the /working/directory/DNA/
+```bash
+source KCNH2_DMS-env/bin/activate
+python KCNH2_DMS/main.py
+```
 
-$ virtualenv /working/directory/KCNH2_DMS
+This layout ensures all relative paths in the repository resolve correctly.
 
-$ source ./KCNH2_DMS/bin/activate
+## Citation
 
-$ ./KCNH2_DMS/bin/python3 -m pip install install packages
-
-$ ./KCNH2_DMS/bin/python3 ./KCNH2_DMS/main.py
-
-This directory structure should allow for correct recognition of all dependencies and subscripts needed in the virtual environment
-
+If you use this code or data in your work, please cite the original manuscript referenced above.
