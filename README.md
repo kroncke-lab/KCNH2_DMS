@@ -3,7 +3,7 @@
 ## Overview
 This repository contains the analysis code supporting the publication:
 
-> Vanoye et al., *The American Journal of Human Genetics* (2022). PMID: 35688148 · PMCID: PMC9300756 · DOI: [10.1016/j.ajhg.2022.05.003](https://doi.org/10.1016/j.ajhg.2022.05.003)
+> Ng et al., *The American Journal of Human Genetics* (2022). 109(7):1208–1216. doi: 10.1016/j.ajhg.2022.05.003; PMID: 35688148  PMCID: PMC9300756
 
 The scripts implement a deep mutational scanning (DMS) workflow for KCNH2 missense variants. The pipeline:
 
